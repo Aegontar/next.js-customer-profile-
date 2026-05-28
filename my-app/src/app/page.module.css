@@ -1,0 +1,12 @@
+.header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.page {
+  margin: 0;
+  height: 100vh;
+  /* Adjust the percentage to control the width of the central dark bar */
+  background-color: #f8c7c7;
+}
