@@ -8,7 +8,8 @@ export default function Home() {
       <Form action="/search">
         {/* On submission, the input value will be appended to
           the URL, e.g. /search?query=abc */}
-        <input name="query" />
+        <input name="email" />
+        <input name="password" />
         <button type="submit">Submit</button>
       </Form>
     </div>
