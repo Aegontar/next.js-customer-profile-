@@ -1,17 +1,28 @@
 import styles from "./page.module.css";
-import Form from "next/form";
 
 export default function Home() {
+  async function createInvoice(formData: FormData) {
+    "use server";
+
+    const rawFormData = {
+      userName: formData.get("userName"),
+      password: formData.get("passWord"),
+    };
+
+    console.log("rawFormData", rawFormData);
+
+    // mutate data
+    // revalidate the cache
+  }
+
   return (
     <div className={styles.page}>
       <main className={styles.header}>Keep Track of all Customers</main>
-      <Form action="/search">
-        {/* On submission, the input value will be appended to
-          the URL, e.g. /search?query=abc */}
-        <input name="email" />
-        <input name="password" />
+      <form action={createInvoice}>
+        <input name="userName" type="text" />
+        <input name="passWord" type="text" />
         <button type="submit">Submit</button>
-      </Form>
+      </form>
     </div>
   );
 }
